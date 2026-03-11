@@ -1,0 +1,45 @@
+{
+  "os": "Linux-6.8.0-101-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.19",
+  "startedAt": "2026-03-11T02:49:21.994927Z",
+  "args": [
+    "--policy.path=lerobot/smolvla_base",
+    "--policy.repo_id=CLM0215/smolvla_pick_cube",
+    "--dataset.repo_id=CLM0215/pick_cube_test2",
+    "--batch_size=16",
+    "--steps=20000",
+    "--output_dir=outputs/train/smolvla_try3",
+    "--job_name=smolvla_training",
+    "--policy.device=cuda",
+    "--wandb.enable=true",
+    "--policy.scheduler_decay_lr=1e-5"
+  ],
+  "program": "/home/kevin/miniconda3/envs/smolvla/bin/lerobot-train",
+  "root": "outputs/train/smolvla_try3",
+  "host": "kevin-ROG-Zephyrus-G15-GA502IU-GA502IU",
+  "executable": "/home/kevin/miniconda3/envs/smolvla/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce GTX 1660 Ti with Max-Q Design",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "502392610816",
+      "used": "127847817216"
+    }
+  },
+  "memory": {
+    "total": "16151220224"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce GTX 1660 Ti with Max-Q Design",
+      "memoryTotal": "6442450944",
+      "cudaCores": 1536,
+      "architecture": "Turing",
+      "uuid": "GPU-e662b3d8-aeaa-e612-4763-f9b19cf2acff"
+    }
+  ],
+  "cudaVersion": "13.1",
+  "writerId": "o4kgjrrhbti7ai96j8g6aey0fpovjqea"
+}

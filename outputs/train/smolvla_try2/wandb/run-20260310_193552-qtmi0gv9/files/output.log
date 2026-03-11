@@ -1,0 +1,149 @@
+INFO 2026-03-10 19:35:54 db_utils.py:117 [1m[34mLogs will be synced with wandb.[0m
+INFO 2026-03-10 19:35:54 db_utils.py:118 Track this run --> [1m[33mhttps://wandb.ai/kevinma20000215-university-of-washington/lerobot/runs/qtmi0gv9[0m
+INFO 2026-03-10 19:35:54 ot_train.py:217 Creating dataset
+INFO 2026-03-10 19:35:54 eo_utils.py:106 Using video codec: libsvtav1
+INFO 2026-03-10 19:35:54 ot_train.py:235 Creating policy
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+INFO 2026-03-10 19:35:54 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:35:54 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:35:54 _client.py:1025 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json "HTTP/1.1 200 OK"
+config.json: 3.77kB [00:00, 2.25MB/s]
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 2026-03-10 19:35:54 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO 2026-03-10 19:35:54 _client.py:1025 HTTP Request: GET https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/xet-read-token/7b375e1b73b11138ff12fe22c8f2822d8fe03467 "HTTP/1.1 200 OK"
+model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.03G/2.03G [00:27<00:00, 73.5MB/s]
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json "HTTP/1.1 200 OK"
+generation_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 136/136 [00:00<00:00, 183kB/s]
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json "HTTP/1.1 200 OK"
+processor_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 67.0/67.0 [00:00<00:00, 87.0kB/s]
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: GET https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:23 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/chat_template.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json "HTTP/1.1 200 OK"
+chat_template.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 430/430 [00:00<00:00, 548kB/s]
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json "HTTP/1.1 200 OK"
+preprocessor_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 599/599 [00:00<00:00, 968kB/s]
+INFO 2026-03-10 19:36:24 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/processor_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:25 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:25 _client.py:1025 HTTP Request: HEAD https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO 2026-03-10 19:36:25 _client.py:1025 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO 2026-03-10 19:36:25 _client.py:1025 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json "HTTP/1.1 200 OK"
+tokenizer_config.json: 28.6kB [00:00, 14.6MB/s]
+INFO 2026-03-10 19:36:25 _client.py:1025 HTTP Request: GET https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/kevin/.local/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/projects/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 236, in train
+    policy = make_policy(
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/factory.py", line 492, in make_policy
+    policy = policy_cls.from_pretrained(**kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/pretrained.py", line 108, in from_pretrained
+    instance = cls(config, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/smolvla/modeling_smolvla.py", line 246, in __init__
+    self.model = VLAFlowMatching(config, rtc_processor=self.rtc_processor)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/smolvla/modeling_smolvla.py", line 559, in __init__
+    self.vlm_with_expert = SmolVLMWithExpertModel(
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/smolvla/smolvlm_with_expert.py", line 87, in __init__
+    self.processor = AutoProcessor.from_pretrained(model_id)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/models/auto/processing_auto.py", line 396, in from_pretrained
+    return processor_class.from_pretrained(
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/processing_utils.py", line 1394, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/processing_utils.py", line 1453, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1156, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2039, in from_pretrained
+    for template in list_repo_templates(
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/utils/hub.py", line 167, in list_repo_templates
+    return [
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/utils/hub.py", line 167, in <listcomp>
+    return [
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 3419, in list_repo_tree
+    for path_info in paginate(path=tree_url, headers=headers, params={"recursive": recursive, "expand": expand}):
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/utils/_pagination.py", line 37, in paginate
+    hf_raise_for_status(r)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 787, in hf_raise_for_status
+    raise entry_err from e
+huggingface_hub.errors.RemoteEntryNotFoundError: 404 Client Error. (Request ID: Root=1-69b0d529-082bda1a5a937b49616012dc;21e0cb8a-29c3-44a9-af93-e1494eb17e4b)
+
+Entry Not Found for url: https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false.
+additional_chat_templates does not exist on "main"
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/kevin/.local/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/projects/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 236, in train
+    policy = make_policy(
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/factory.py", line 492, in make_policy
+    policy = policy_cls.from_pretrained(**kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/pretrained.py", line 108, in from_pretrained
+    instance = cls(config, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/smolvla/modeling_smolvla.py", line 246, in __init__
+    self.model = VLAFlowMatching(config, rtc_processor=self.rtc_processor)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/smolvla/modeling_smolvla.py", line 559, in __init__
+    self.vlm_with_expert = SmolVLMWithExpertModel(
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/smolvla/smolvlm_with_expert.py", line 87, in __init__
+    self.processor = AutoProcessor.from_pretrained(model_id)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/models/auto/processing_auto.py", line 396, in from_pretrained
+    return processor_class.from_pretrained(
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/processing_utils.py", line 1394, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/processing_utils.py", line 1453, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1156, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 2039, in from_pretrained
+    for template in list_repo_templates(
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/utils/hub.py", line 167, in list_repo_templates
+    return [
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/transformers/utils/hub.py", line 167, in <listcomp>
+    return [
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 3419, in list_repo_tree
+    for path_info in paginate(path=tree_url, headers=headers, params={"recursive": recursive, "expand": expand}):
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/utils/_pagination.py", line 37, in paginate
+    hf_raise_for_status(r)
+  File "/home/kevin/miniconda3/envs/lerobot/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 787, in hf_raise_for_status
+    raise entry_err from e
+huggingface_hub.errors.RemoteEntryNotFoundError: 404 Client Error. (Request ID: Root=1-69b0d529-082bda1a5a937b49616012dc;21e0cb8a-29c3-44a9-af93-e1494eb17e4b)
+
+Entry Not Found for url: https://huggingface.co/api/models/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false.
+additional_chat_templates does not exist on "main"

@@ -1,0 +1,61 @@
+INFO 2026-03-10 19:52:14 db_utils.py:117 [1m[34mLogs will be synced with wandb.[0m
+INFO 2026-03-10 19:52:14 db_utils.py:118 Track this run --> [1m[33mhttps://wandb.ai/kevinma20000215-university-of-washington/lerobot/runs/q7m2px97[0m
+INFO 2026-03-10 19:52:14 ot_train.py:217 Creating dataset
+INFO 2026-03-10 19:52:14 eo_utils.py:106 Using video codec: libsvtav1
+INFO 2026-03-10 19:52:14 ot_train.py:235 Creating policy
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Reducing the number of VLM layers to 16 ...
+policy_preprocessor.json: 1.87kB [00:00, 4.35MB/s]
+policy_preprocessor_step_5_normalizer_pr(…): 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 640/640 [00:00<00:00, 1.03kB/s]
+policy_postprocessor.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 660/660 [00:00<00:00, 1.64MB/s]
+INFO 2026-03-10 19:52:26 ot_train.py:290 Creating optimizer and scheduler
+INFO 2026-03-10 19:52:26 hedulers.py:105 Auto-scaling LR scheduler: num_training_steps (20000) < num_decay_steps (30000). Scaling warmup: 1000 → 666, decay: 30000 → 20000 (scale factor: 0.667)
+INFO 2026-03-10 19:52:26 ot_train.py:325 [1m[33mOutput dir:[0m outputs/train/smolvla_try4
+INFO 2026-03-10 19:52:26 ot_train.py:332 cfg.steps=20000 (20K)
+INFO 2026-03-10 19:52:26 ot_train.py:333 dataset.num_frames=26910 (27K)
+INFO 2026-03-10 19:52:26 ot_train.py:334 dataset.num_episodes=30
+INFO 2026-03-10 19:52:26 ot_train.py:337 Effective batch size: 16 x 1 = 16
+INFO 2026-03-10 19:52:26 ot_train.py:338 num_learnable_params=99880992 (100M)
+INFO 2026-03-10 19:52:26 ot_train.py:339 num_total_params=450046176 (450M)
+Training:   0%|                                                                                                                                                                 | 0/20000 [00:00<?, ?step/s]INFO 2026-03-10 19:52:26 ot_train.py:403 Start offline training on a fixed dataset, with effective batch size: 16
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/smolvla/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/projects/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 413, in train
+    train_tracker, output_dict = update_policy(
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 122, in update_policy
+    accelerator.backward(loss)
+  File "/home/kevin/.local/lib/python3.10/site-packages/accelerate/accelerator.py", line 2838, in backward
+    loss.backward(**kwargs)
+  File "/home/kevin/.local/lib/python3.10/site-packages/torch/_tensor.py", line 630, in backward
+    torch.autograd.backward(
+  File "/home/kevin/.local/lib/python3.10/site-packages/torch/autograd/__init__.py", line 364, in backward
+    _engine_run_backward(
+  File "/home/kevin/.local/lib/python3.10/site-packages/torch/autograd/graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/smolvla/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/projects/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 413, in train
+    train_tracker, output_dict = update_policy(
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 122, in update_policy
+    accelerator.backward(loss)
+  File "/home/kevin/.local/lib/python3.10/site-packages/accelerate/accelerator.py", line 2838, in backward
+    loss.backward(**kwargs)
+  File "/home/kevin/.local/lib/python3.10/site-packages/torch/_tensor.py", line 630, in backward
+    torch.autograd.backward(
+  File "/home/kevin/.local/lib/python3.10/site-packages/torch/autograd/__init__.py", line 364, in backward
+    _engine_run_backward(
+  File "/home/kevin/.local/lib/python3.10/site-packages/torch/autograd/graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`

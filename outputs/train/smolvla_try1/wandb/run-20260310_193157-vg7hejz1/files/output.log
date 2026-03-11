@@ -1,0 +1,41 @@
+INFO 2026-03-10 19:31:59 db_utils.py:117 [1m[34mLogs will be synced with wandb.[0m
+INFO 2026-03-10 19:31:59 db_utils.py:118 Track this run --> [1m[33mhttps://wandb.ai/kevinma20000215-university-of-washington/lerobot/runs/vg7hejz1[0m
+INFO 2026-03-10 19:31:59 ot_train.py:217 Creating dataset
+INFO 2026-03-10 19:31:59 eo_utils.py:106 Using video codec: libsvtav1
+INFO 2026-03-10 19:31:59 ot_train.py:235 Creating policy
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/scripts/lerobot_train.py", line 236, in train
+    policy = make_policy(
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/factory.py", line 454, in make_policy
+    policy_cls = get_policy_class(cfg.type)
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/factory.py", line 115, in get_policy_class
+    from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/smolvla/modeling_smolvla.py", line 67, in <module>
+    from lerobot.policies.smolvla.smolvlm_with_expert import SmolVLMWithExpertModel
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/smolvla/smolvlm_with_expert.py", line 19, in <module>
+    from transformers import (
+ModuleNotFoundError: No module named 'transformers'
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/lerobot/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/scripts/lerobot_train.py", line 236, in train
+    policy = make_policy(
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/factory.py", line 454, in make_policy
+    policy_cls = get_policy_class(cfg.type)
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/factory.py", line 115, in get_policy_class
+    from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/smolvla/modeling_smolvla.py", line 67, in <module>
+    from lerobot.policies.smolvla.smolvlm_with_expert import SmolVLMWithExpertModel
+  File "/home/kevin/.local/lib/python3.10/site-packages/lerobot/policies/smolvla/smolvlm_with_expert.py", line 19, in <module>
+    from transformers import (
+ModuleNotFoundError: No module named 'transformers'

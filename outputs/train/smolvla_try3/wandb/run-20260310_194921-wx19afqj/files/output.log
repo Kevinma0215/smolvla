@@ -1,0 +1,58 @@
+INFO 2026-03-10 19:49:23 db_utils.py:117 [1m[34mLogs will be synced with wandb.[0m
+INFO 2026-03-10 19:49:23 db_utils.py:118 Track this run --> [1m[33mhttps://wandb.ai/kevinma20000215-university-of-washington/lerobot/runs/wx19afqj[0m
+INFO 2026-03-10 19:49:23 ot_train.py:217 Creating dataset
+INFO 2026-03-10 19:49:23 eo_utils.py:106 Using video codec: libsvtav1
+INFO 2026-03-10 19:49:23 ot_train.py:235 Creating policy
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+vocab.json: 801kB [00:00, 11.7MB/s]
+merges.txt: 466kB [00:00, 11.6MB/s]
+tokenizer.json: 3.55MB [00:00, 25.4MB/s]
+added_tokens.json: 4.74kB [00:00, 4.46MB/s]
+special_tokens_map.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 868/868 [00:00<00:00, 2.13MB/s]
+Reducing the number of VLM layers to 16 ...
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 907M/907M [00:23<00:00, 38.1MB/s]
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/smolvla/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/projects/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 236, in train
+    policy = make_policy(
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/factory.py", line 526, in make_policy
+    validate_visual_features_consistency(cfg, features)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/utils.py", line 249, in validate_visual_features_consistency
+    raise_feature_mismatch_error(provided_visuals, expected_visuals)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/utils.py", line 214, in raise_feature_mismatch_error
+    raise ValueError(
+ValueError: Feature mismatch between dataset/environment and policy config.
+- Missing features: ['observation.images.camera1', 'observation.images.camera2', 'observation.images.camera3']
+- Extra features: ['observation.images.front']
+
+Please ensure your dataset and policy use consistent feature names.
+If your dataset uses different observation keys (e.g., cameras named differently), use the `--rename_map` argument, for example:
+  --rename_map='{"observation.images.left": "observation.images.camera1", "observation.images.top": "observation.images.camera2"}'
+Traceback (most recent call last):
+  File "/home/kevin/miniconda3/envs/smolvla/bin/lerobot-train", line 6, in <module>
+    sys.exit(main())
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 547, in main
+    train()
+  File "/home/kevin/projects/lerobot/src/lerobot/configs/parser.py", line 233, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/kevin/projects/lerobot/src/lerobot/scripts/lerobot_train.py", line 236, in train
+    policy = make_policy(
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/factory.py", line 526, in make_policy
+    validate_visual_features_consistency(cfg, features)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/utils.py", line 249, in validate_visual_features_consistency
+    raise_feature_mismatch_error(provided_visuals, expected_visuals)
+  File "/home/kevin/projects/lerobot/src/lerobot/policies/utils.py", line 214, in raise_feature_mismatch_error
+    raise ValueError(
+ValueError: Feature mismatch between dataset/environment and policy config.
+- Missing features: ['observation.images.camera1', 'observation.images.camera2', 'observation.images.camera3']
+- Extra features: ['observation.images.front']
+
+Please ensure your dataset and policy use consistent feature names.
+If your dataset uses different observation keys (e.g., cameras named differently), use the `--rename_map` argument, for example:
+  --rename_map='{"observation.images.left": "observation.images.camera1", "observation.images.top": "observation.images.camera2"}'
